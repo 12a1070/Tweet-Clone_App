@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -14,16 +14,18 @@ class PostsController < ApplicationController
     @post = Post.new
   end
   def create
-    @post =.Post.new(post_params)
+    @post = Post.new(post_params)
     if params[:back]
       render:new
     else
       if @post.save
-      redirect_to post_path,notice:"メッセージを作成しました"
+      redirect_to post_path(@post),notice:"メッセージを作成しました"
       else
       render:new,status:  unprocessable_entity
       end
     end
+  end
+  def show
   end
   def update
     if @post.update(post_params)
