@@ -25,7 +25,18 @@ class PostsController < ApplicationController
       end
     end
   end
+  def update
+    if @post.update(post_params)
+      redirect_to post_path,notice:"メッセージを更新しました"
+    else
+      render:edit,status: :unprocessable_entity
+    end
+  end
 
+  def destroy
+    @post.destroy
+    redirect_to posts_url, notice: "メッセージを消去しました"
+  end
 
   private
   def post_params

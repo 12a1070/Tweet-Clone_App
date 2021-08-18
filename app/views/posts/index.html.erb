@@ -1,6 +1,5 @@
 <h1 class="header">投稿の一覧</h1>
 <%= notice %>
-
 <div class="index"><table>
   <tr>
     <th>内容</th>
@@ -9,12 +8,11 @@
   <tr>
     <td><%= post.content %></td>
     <td><%= link_to 'ツイート確認', post_path(post.id) %></td>
-    <td><%= link_to "ツイート編集する", edit_post_path(post.id), data: { confirm: '編集していいですか？大丈夫ですか？' } %></td>
+    <td><%= link_to "ツイート編集", edit_post_path(post.id), data: { confirm: '編集していいですか？大丈夫ですか？' } %></td>
     <td><%= link_to 'ツイート削除', post_path(post.id), method: :delete, data: { confirm: '削除していいですか？後悔しませんね' } %></td>
 　</tr>
 <% end %>
 </table>
 </div>
-
 <footer>
 <%= link_to 'ツイートする', new_post_path %>
