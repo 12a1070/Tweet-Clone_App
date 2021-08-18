@@ -13,14 +13,13 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
-
   def create
     @post =.Post.new(post_params)
     if params[:back]
       render:new
     else
       if @post.save
-      redirect_to post_path,notice:"ポストを作成しました"
+      redirect_to post_path,notice:"メッセージを作成しました"
       else
       render:new,status:  unprocessable_entity
       end
