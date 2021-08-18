@@ -32,7 +32,6 @@ class PostsController < ApplicationController
       render:edit,status: :unprocessable_entity
     end
   end
-
   def destroy
     @post.destroy
     redirect_to posts_url, notice: "メッセージを消去しました"

@@ -1,0 +1,13 @@
+<h2>confirm</h2>
+<div class="form">
+    <%= form_with(model: @post, local: true) do |form| %>
+    <div class="field">
+        <%= form.hidden_field :content%>
+        <p><%= @post.content %></p>
+    </div>
+    <div class="actions">
+        <%= form.submit %>
+        <%= form.submit "Back", name: 'back' %>
+    </div>
+    <% end %>
+</div>
