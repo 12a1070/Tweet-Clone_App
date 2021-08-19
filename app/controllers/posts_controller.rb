@@ -21,7 +21,7 @@ class PostsController < ApplicationController
       if @post.save
       redirect_to post_path(@post.id),notice:"メッセージを作成しました"
       else
-      render:new,status: unprocessable_entity
+      render:new
       end
     end
   end
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       redirect_to post_path,notice:"メッセージを更新しました"
     else
-      render:edit,status: :unprocessable_entity
+      render:edit
     end
   end
   def destroy
