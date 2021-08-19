@@ -19,8 +19,7 @@ class PostsController < ApplicationController
       render:new
     else
       if @post.save
-      redirect_to post_path,notice:"メッセージを作成しました"
-      # (@post)をpost_pathの後ろに入れる。(修正前)
+      redirect_to post_path(@post.id),notice:"メッセージを作成しました"
       else
       render:new,status:  unprocessable_entity
       end
