@@ -21,7 +21,7 @@ class PostsController < ApplicationController
       if @post.save
       redirect_to post_path(@post.id),notice:"メッセージを作成しました"
       else
-      render:new,status:  unprocessable_entity
+      render:new,status: unprocessable_entity
       end
     end
   end

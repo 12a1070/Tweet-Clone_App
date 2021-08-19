@@ -1,3 +1,90 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.header {
+    height: 50px;
+    width: 400px;
+    color: white;
+    background-color: pink;
+    font-size: 30px;
+    padding: 10px;
+}
+
+form {
+    height: 350px;
+    width: auto;
+}
+
+.form {
+    height: 400px;
+    width: auto;
+}
+
+.tweet_title {
+    height: 100px;
+    width: auto;
+    padding: 28px;
+}
+
+label {
+    float:left;
+    padding: 20px;
+    font-size: 20px;
+}
+input#post_name {
+    height: 25px;
+    width: 200px;
+    padding: 10px;
+}
+
+.tweet_content {
+    height: 50px;
+    width: auto;
+    padding: 10px;
+}
+input#post_content {
+    height: 20px;
+    width: 200px;
+    padding: 10px;
+
+}
+
+.btn {
+    background-color: hsla(231, 28%, 50%, 0.521);
+  color: #fff;
+  float: left;
+  padding: 15px;
+  position: absolute;
+  left: 150px;
+  font-size: 10px;
+
+}
+
+body p {
+    font-size: 50px;
+}
+#text {
+    float: left;
+}
+
+footer {
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-size: 30px;
+    background-color: lightgreen;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+table {
+    height: 150px;
+    width: auto;
+
+}
+
+table td {
+    padding: 10px;
+    border: solid #01050a 2px;
+}
+
+.index {
+overflow: scroll;
+}
